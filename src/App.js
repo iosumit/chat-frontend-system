@@ -6,13 +6,12 @@ import store from './store'
 function App() {
   return (
     <Provider store={store}>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />}>
-          <Route index element={<ChatPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route exact path="/chat" element={<ChatPage />} />
+        </Routes>
+      </BrowserRouter>
     </Provider>
   );
 }

@@ -1,8 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <center>
+      <div>HomePage</div>
+      <Link className='btn btn-outline-primary' to="/chat">Go to Chat</Link>
+    </center>
   )
 }
 
