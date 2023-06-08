@@ -1,4 +1,5 @@
 import React from 'react'
+import { ChatPdp } from './component/ChatPdp'
 
 const ChatPage = () => {
   return (
@@ -7,7 +8,7 @@ const ChatPage = () => {
 
         <div class="col-md-2">Left</div>
 
-        <div class="col-md-8">Right</div>
+        <div class="col-md-8"><ChatPdp /> </div>
 
       </div>
     </div>
