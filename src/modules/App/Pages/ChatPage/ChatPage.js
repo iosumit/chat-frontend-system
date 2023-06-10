@@ -1,14 +1,14 @@
 import React from 'react'
-import { ChatPdp } from './component/ChatPdp'
+import ChatPdp  from './component/ChatPdp'
 import "./ChatPage.css"
 const ChatPage = () => {
   return (
-    <div className='.container-fluid chatBody'>
-      <div class="row justify-content-md-center">
+    <div className='container chatBody'>
+      <div className='row'>
 
-        <div class="col-md-2">Left</div>
+        <div class="col-12 col-md-12 col-lg-4 " style={{backgroundColor:"gray"}}>Left</div>
 
-        <div class="col-md-8"><ChatPdp /> </div>
+        <div class="col-12 col-md-12 col-lg-8"><ChatPdp /> </div>
       </div>
     </div>
   )

@@ -5,3 +5,24 @@
     overflow: auto;
     overflow-x: hidden;
 }
+.inputBody{
+    position: absolute;
+    bottom: 10px;
+    width: 96%;
+    display: flex;
+    align-items: center;
+}
+.sendBtn{
+    width: 50px;
+    border-radius: 50px;
+    background-color: rgb(0, 204, 68);
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 10px;
+}
+.sendBtn:hover{
+    background-color:#e6ffee;
+    cursor: pointer;
+}

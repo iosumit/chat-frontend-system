@@ -4,7 +4,7 @@ function Box({ children, ...props }) {
   return <div {...props}>{children}</div>
 }
 
-export default function Card() {
+export default function Card({children}) {
   return (
     <Box
       style={{
@@ -13,11 +13,11 @@ export default function Card() {
        height:"100vh",
        overflow:'hidden',
        padding:10,
-       margin:"0px 10px 0px 10px",
-       borderRadius:8
+       borderRadius:8,
+       position:'relative'
       }}
     >
-      Sally Montgomery
+      {children}
     </Box>
   )
 }
