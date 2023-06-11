@@ -27,7 +27,6 @@ function TextInput(props) {
       <input
         type={inputType}
         value={inputValue}
-        name="input-form"
         onChange={handleChange}
         placeholder={props?.placeholder}
         autoComplete={props?.autocomplete ? props.autocomplete : "off"}
