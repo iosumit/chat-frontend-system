@@ -5,7 +5,7 @@ const inputStyle = {
   border: '1px solid #ccc',
   borderRadius: '4px',
   color: '#333',
-  backgroundColor: '#fff',
+  backgroundColor: '#f1f5f0',
   width: '100%',
   display: 'block',
   outline:"none"
@@ -23,11 +23,10 @@ function TextInput(props) {
 
   return (
     <>
-      <span>{props?.title? props.title : "Untitled input"} &nbsp; </span>
+      {props.tittle ? <span>{props.title} &nbsp; </span>:null}
       <input
         type={inputType}
         value={inputValue}
-        name="input-form"
         onChange={handleChange}
         placeholder={props?.placeholder}
         autoComplete={props?.autocomplete ? props.autocomplete : "off"}
