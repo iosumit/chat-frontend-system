@@ -17,11 +17,7 @@ const ChatPage = () => {
       </div>
       {/* AppBar Component */}
       <div className="row">
-        <div
-          class="col-12 col-md-12 col-lg-4 "
-          style={{ backgroundColor: "gray" }}
-        >
-          Left
+        <div class="col-12 col-md-12 col-lg-4 ">
           <ChatPlp />
         </div>
 

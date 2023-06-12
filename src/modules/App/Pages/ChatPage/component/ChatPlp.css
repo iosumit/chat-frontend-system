@@ -3,47 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
-.main{
-    position: relative;
-}
+
 
 .chatbox{
-    position: relative;
     margin-top: 0%;
-    height:100vh;
-    border:1px solid black;
+    height:100vh;   
     border-radius: 10px;
+    margin-left: 1%;
 }
 .imagelist{
-    
+   
     height: 50px;
     
 }
 .imagebox{
-    position: absolute;
+   
     border-radius: 50px;
-    border: 1px solid black;
-    width:30px;
-    height:30px;
-    top:7px;
-    left: 10px;
+    border: none;
+    width:40px;
+    height:40px;
+    margin-top: 5%;
+    left: 20px;
+
 }
 .personlogo{
-    height:30px;
-    width:30px;
+    height:40px;
+    width:40px;
     border-radius: 50px;
    
 }
 .status{
-    position: absolute;
+    
     z-index:1;
-    height:10px;
-    width:10px;
-    border:1px solid black;
+    height:15px;
+    width:15px;
+    border:none;
     border-radius: 50px;
-    margin-top: 29px;
-    margin-left: 15px;
-    background-color: green;
+    margin-top: 48px;
+    margin-left: 30px;
+    background-color:#73C6B6;
 }
 .chatlist{
     border:1px solid rgb(185, 182, 182);
@@ -51,4 +49,5 @@
     border-left: none;
     border-right: none;
     height:50px;
+    margin-top: 5%;
 }
