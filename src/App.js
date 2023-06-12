@@ -1,8 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./modules/App/Pages/HomePage/HomePage";
 import ChatPage from "./modules/App/Pages/ChatPage/ChatPage";
-import { Provider } from 'react-redux'
-import store from './store'
+import { Provider } from "react-redux";
+import store from "./store";
+import "./App";
+
 function App() {
   return (
     <Provider store={store}>
