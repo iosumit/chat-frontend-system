@@ -9,7 +9,7 @@
 
 .chatbox{
     position: relative;
-    margin-top: 25%;
+    margin-top: 0%;
     height:100vh;
     border:1px solid black;
     border-radius: 10px;
@@ -35,7 +35,7 @@
    
 }
 .status{
-    position: fixed;
+    position: absolute;
     z-index:1;
     height:10px;
     width:10px;
