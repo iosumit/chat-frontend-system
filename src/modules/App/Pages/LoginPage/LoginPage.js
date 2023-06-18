@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Card from '../../../Components/Card/Card'
 import TextInput from '../../../Components/InputComponent/InputComponent'
 import Button from '../../../Components/ButtonComponent/ButtonComponent'
@@ -11,6 +11,11 @@ const LoginPage = () => {
     username:'',
     pin:''
   })
+
+useEffect(()=>{
+ window.localStorage.clear()
+},[])
+
   const pageHandle = () =>{
     window.location='/signup'
   }
@@ -22,9 +27,12 @@ const LoginPage = () => {
   }
 
   const loginHandle = () =>{
-    // callApi(`user/authenticate`,"post",user,true).then((res)=>{
-    //   console.log(res)
-    // }) 
+    callApi(`user/authenticate`,"post",user,true).then((res)=>{
+      if(res?.status === "Success"){
+        window.localStorage.setItem('token',res?.data?.token)
+        window.location='/chat'
+      }
+    }) 
   }
 
   return (
