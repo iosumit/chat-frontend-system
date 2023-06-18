@@ -4,9 +4,13 @@ import TextInput from '../../../Components/InputComponent/InputComponent'
 import Button from '../../../Components/ButtonComponent/ButtonComponent'
 import callApi from '../../../../util/apiCaller'
 import './login.css'
+import {toast,ToastContainer } from 'react-toastify';
+  import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom'
+
 
 const LoginPage = () => {
- 
+ const navigate = useNavigate()
   const [user,setUser] = useState({
     username:'',
     pin:''
@@ -29,8 +33,15 @@ useEffect(()=>{
   const loginHandle = () =>{
     callApi(`user/authenticate`,"post",user,true).then((res)=>{
       if(res?.status === "Success"){
+        toast.success("Login Success !", {
+          position: toast.POSITION.TOP_RIGHT
+        });
         window.localStorage.setItem('token',res?.data?.token)
-        window.location='/chat'
+        navigate('/chat')
+      }else{
+        toast.error(res?.message,{
+          position:toast.POSITION.TOP_RIGHT
+        })
       }
     }) 
   }
@@ -46,6 +57,7 @@ useEffect(()=>{
        <span className='span-tag' onClick={pageHandle}>Create an Account</span>
        </div>
       </Card>
+      <ToastContainer />
     </div>
   )
 }

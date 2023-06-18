@@ -4,8 +4,13 @@ import LoginPage from "./modules/App/Pages/LoginPage/LoginPage";
 import Signup from "./modules/App/Pages/SignupPage/SignupPage";
 import { Provider } from 'react-redux'
 import store from './store'
+import {ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
+
 function App() {
   return (
+    <>
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
@@ -15,6 +20,8 @@ function App() {
         </Routes>
       </BrowserRouter>
     </Provider>
+    <ToastContainer/>
+    </>
   );
 }
 
