@@ -5,7 +5,7 @@ import Button from '../../../Components/ButtonComponent/ButtonComponent'
 import './signup.css'
 const Signup = () => {
     const pageHandle = () =>{
-        window.location='/login'
+        window.location='/'
     }
   return (
     <div className='login-body'>

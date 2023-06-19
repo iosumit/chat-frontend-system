@@ -26,7 +26,7 @@ console.log(props.tittle)
       {props.tittle ? <span >{props.tittle} &nbsp; </span>:null}
       <input
         type={inputType}
-        value={inputValue}
+        value={props?.value}
         onChange={handleChange}
         placeholder={props?.placeholder}
         autoComplete={props?.autocomplete ? props.autocomplete : "off"}
