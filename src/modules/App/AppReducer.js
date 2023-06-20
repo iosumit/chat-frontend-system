@@ -1,42 +1,23 @@
-import {LOGIN_USER, STATE_LIST, CITY_LIST} from './AppActionType';
+import {SIGNUP_USER_SUCCESS} from './AppActionType';
 
 const initialState = {
-  user: {
-    email: 'ant@gmail.com',
-    password: '123456',
-  },
-  stateList: {
-    stateListData: [],
-    cityListDate: [],
-  },
+ signupUser:{
+  isSignup:false
+ }
 };
 
 const AppReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_USER: {
+   
+    case SIGNUP_USER_SUCCESS: {
       return {
         ...state,
-        user: action.payload,
-      };
-    }
-    case STATE_LIST: {
-      return {
-        ...state,
-        stateList: {
-          ...state.stateList,
-          stateListData: action?.payload,
+        signupUser: {
+          isSignup: action?.isSignup,
         },
       };
     }
-    case CITY_LIST: {
-      return {
-        ...state,
-        stateList: {
-          ...state.stateList,
-          cityListDate: action?.payload,
-        },
-      };
-    }
+  
     default:
       return state;
   }

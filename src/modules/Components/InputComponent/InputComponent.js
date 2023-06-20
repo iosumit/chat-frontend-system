@@ -14,7 +14,6 @@ const inputStyle = {
 function TextInput(props) {
   const [inputType] = useState(props.type);
   const [inputValue, setInputValue] = useState('');
-console.log(props.tittle)
   function handleChange(event) {
     const newValue = event.target.value
     setInputValue(newValue);
