@@ -5,7 +5,7 @@ const HomePage = () => {
   return (
     <center>
       <div>HomePage</div>
-      <Link className='btn btn-outline-primary' to="/chat">Go to Chat</Link>
+      <Link className='btn btn-outline-primary' to="/login">Go to Chat</Link>
     </center>
   )
 }
