@@ -5,7 +5,62 @@ export default function ChatPlp(props) {
   const conversations = [
     {
       name: "Rahul",
-      message: "HII",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
+      time: "9:00am",
+      image:
+        "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
+    },
+    {
+      name: "Rahul",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
+      time: "9:00am",
+      image:
+        "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
+    }, {
+      name: "Rahul",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
+      time: "9:00am",
+      image:
+        "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
+    }, {
+      name: "Rahul",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
+      time: "9:00am",
+      image:
+        "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
+    }, {
+      name: "Rahul",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
+      time: "9:00am",
+      image:
+        "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
+    }, {
+      name: "Rahul",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
+      time: "9:00am",
+      image:
+        "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
+    }, {
+      name: "Rahul",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
+      time: "9:00am",
+      image:
+        "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
+    }, {
+      name: "Rahul",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
+      time: "9:00am",
+      image:
+        "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
+    }, {
+      name: "Rahul",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
+      time: "9:00am",
+      image:
+        "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
+    }, {
+      name: "Rahul",
+      message: "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast",
       time: "9:00am",
       image:
         "https://images.pexels.com/photos/14579361/pexels-photo-14579361.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load",
@@ -35,8 +90,10 @@ export default function ChatPlp(props) {
   return (
     <>
       <div
-        className=" chatbox"
+
         style={{
+          overflowY: "auto",
+          height: "100%",
           backgroundColor: "#FDFEFE",
           borderRadius: "10px",
           boxShadow: "1px 1px 5px #99A3A4",
@@ -46,25 +103,20 @@ export default function ChatPlp(props) {
         {conversations.map((e) => (
           <ChatuserTile user={e} />
         ))}
-      </div>
+      </div >
     </>
   );
 }
 function ChatuserTile(props) {
   return (
-    <div className="row">
-      <div className="col-md-3 imagelist">
-        <div className="imagebox">
-          <img src={props.user.image} className="personlogo"></img>
+    <div className="row zoom" style={{ justifyContent: "flex-start", marginInline: "8px", paddingInline: "10px" }}>
+      <img src={props.user.image} style={{ height: "56px", marginTop: "10px", width: "56px", objectFit: "cover", borderRadius: "50%", padding: 0 }} alt="" srcset="" />
+      <div className="col ms-3  border-bottom" style={{ flexDirection: "column", paddingTop: "14px", paddingBottom: "16px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between" }} >
+          <span className="fw-bold">{props.user.name}</span>
+          <span style={{ fontSize: "14px" }}>{props.user.time}</span>
         </div>
-        <div className="status"></div>
-      </div>
-      <div className="col-md-8 chatlist">
-        <div className="ChatTiming">
-          <h6>{props.user.name}</h6>
-          <p className="time">{props.user.time}</p>
-        </div>
-        <p className="user">{props.user.message}</p>
+        <span className="singleLine" style={{ fontSize: "14px" }}>{props.user.message}</span>
       </div>
     </div>
   );
