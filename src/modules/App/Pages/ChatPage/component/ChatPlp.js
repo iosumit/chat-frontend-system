@@ -93,7 +93,7 @@ export default function ChatPlp(props) {
 
         style={{
           overflowY: "auto",
-          height: "100%",
+          // height: "100%",
           backgroundColor: "#FDFEFE",
           borderRadius: "10px",
           boxShadow: "1px 1px 5px #99A3A4",
