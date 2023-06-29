@@ -27,7 +27,7 @@ const ChatPdp = () => {
                     })}
                 </div>
                 <div className='inputBody'>
-                    <TextInput placeholder="type your message" onChange={(message) => inputMessageHandle(message)}/>
+                    <TextInput placeholder="type your message" value={message} onChange={(message) => inputMessageHandle(message)}/>
                     <div className='sendBtn'>
                         <i class="bi bi-send-fill" style={{ color: '#fff' }} onClick={messageHandle}></i>
                     </div>
